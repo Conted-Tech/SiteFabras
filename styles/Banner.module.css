@@ -1,10 +1,23 @@
 .bannerContainer {
     position: relative;
     width: 100%;
-    height: 865px;
-    /* Ajuste conforme necessário */
+    height: 850px;
     overflow: hidden;
+    /* Restante do seu CSS para bannerContainer */
 }
+
+.bannerContainer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 35%; /* Ajuste a altura do gradiente conforme necessário */
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+    z-index: 2; /* Certifique-se de que esteja acima da imagem */
+}
+
+
 
 .bannerText {
     position: absolute;
@@ -38,7 +51,7 @@
 
 .bannerContainer {
     position: relative;
-    
+
 }
 
 .bannerCards {
@@ -56,7 +69,7 @@
     height: 11.5rem;
     z-index: 3;
     /* Garantir que fique acima da imagem e do filtro */
-    background: rgba(0, 167, 167, 0.4);
+    background: rgba(0, 167, 167, 0.8);
     color: white;
     text-align: center;
 
@@ -74,7 +87,8 @@
 
 .bannerBorderSides {
     position: relative;
-    padding-left: 10px; /* ou qualquer outro valor necessário */
+    padding-left: 10px;
+    /* ou qualquer outro valor necessário */
 }
 
 .bannerBorderSides::before,
@@ -83,10 +97,14 @@
     position: absolute;
     left: 0;
     right: 0;
-    width: 1px; /* Largura da borda */
-    background: white; /* Cor da borda */
-    top: 18%; /* Ajuste para posicionar a borda mais curta */
-    bottom: 18%; /* Ajuste para posicionar a borda mais curta */
+    width: 1px;
+    /* Largura da borda */
+    background: white;
+    /* Cor da borda */
+    top: 18%;
+    /* Ajuste para posicionar a borda mais curta */
+    bottom: 18%;
+    /* Ajuste para posicionar a borda mais curta */
     background: rgba(255, 255, 255, 0.5);
 }
 
@@ -96,29 +114,30 @@
 }
 
 
-.bannermissao::before{
+.bannermissao::before {
     content: url('../public/img/high-quality.svg');
     vertical-align: middle;
     display: inline-block;
     margin-right: 10px;
-  
-    
+
+
 }
 
-.bannerVisao::before{
+.bannerVisao::before {
     content: url('../public/img/goal.svg');
     vertical-align: middle;
     display: inline-block;
     margin-right: 10px;
-  
-    
+
+
 }
 
-.bannerValores::before{
+.bannerValores::before {
     content: url('../public/img/certificate.svg');
     vertical-align: middle;
     display: inline-block;
     margin-right: 10px;
-  
-    
+
+
 }
+
